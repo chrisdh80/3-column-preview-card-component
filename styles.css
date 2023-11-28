@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    /* ### Primary */
+
+--bright-orange: hsl(31, 77%, 52%)
+--dark-cyan: hsl(184, 100%, 22%)
+--very-dark-cyan: hsl(179, 100%, 13%)
+
+/* ### Neutral */
+
+--transparent-white: hsla(0, 0%, 100%, 0.75)
+--very-light-gray: hsl(0, 0%, 95%)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display:grid;
+    height: 100vh;
+    place-items: center;
+    font-size: 15px;
+}
+
+.container {
+    display: flex;
+    width: 800px;
+}
+
+.sedan, .suv, .luxury {
+    padding: 2.5rem;
+}
+
+.sedan {
+    background-color: hsl(31, 77%, 52%);
+    border-bottom-left-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+}
+
+.suv {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.luxury {
+    background-color: hsl(179, 100%, 13%);
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+    h2 {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        font-size: 40px;
+        font-family: "Big Shoulders Display"; 
+        font-weight: 700;
+        color: hsl(0, 0%, 95%);
+    }
+
+        p {
+            color: hsla(0, 0%, 100%, 0.75);
+            padding-bottom: 6rem;
+        }
+
+    button {
+        width: 75%;
+        padding: 0.8rem;
+        border-radius: 2rem;
+        border: none;
+        cursor: pointer;
+    }   
+
+    .sedan > button {
+        color: var(--Bright-orange);
+    }
+    
+    .suv > button {
+        color: var(--Dark-cyan);
+    }
+
+    .luxury > button {
+        color: var(--Very-dark-cyan);
+    }
+
+    .sedan > button:hover {
+        background-color: var(--Bright-orange);
+        border: 2px solid hsl(0, 0%, 95%);
+        color: hsl(0, 0%, 95%);
+    }
+
+    .suv > button:hover {
+        background-color: var(--Dark-cyan);
+        border: 2px solid hsl(0, 0%, 95%);
+        color: hsl(0, 0%, 95%);
+    }
+    
+    .luxury > button:hover {
+        background-color: var(--Very-dark-cyan);
+        border: 2px solid hsl(0, 0%, 95%);
+        color: hsl(0, 0%, 95%);
+    }
+
+
+
+@media only screen and (max-width: 43.75rem) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        max-width: 20rem;
+    }
+    
+    p {
+        padding-bottom: 1rem;
+    }
+
+    .sedan {
+        border-top-right-radius: 0.5rem;
+    }
+
+    .luxury {
+        border-bottom-left-radius:0.5rem;
+    }
+}
